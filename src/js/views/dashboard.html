@@ -1,0 +1,28 @@
+<!--
+ Copyright (c) 2014, 2020, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <div>
+     <oj-button on-oj-action="[[buttonClick]]">
+       <span>
+          <oj-bind-text value="Take Picture"></oj-bind-text>
+       </span>
+     </oj-button>
+     <br>
+     <ul class="oj-flex oj-flex-items-pad">
+       <oj-bind-for-each data="[[pics]]">
+         <template data-oj-as="pic">
+          <li style="list-style: none" class="oj-flex-item">
+             <img :src="[[pic.data]]"
+                 width="250"
+                 height="250"
+                 alt="No pictrue taken."   
+                 style="border:1px solid black"/>
+         </template>
+
+       </oj-bind-for-each>
+    
+  </div>
+</div>
